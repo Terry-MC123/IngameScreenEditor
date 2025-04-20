@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "in-game_screen_editor",
+  "version": "${version}",
+  "name": "In-game Screen Editor",
+  "description": "In-game Screen Editor",
+  "authors": [
+    "Terry_MC"
+  ],
+  "contact": {
+    "homepage": "https://terry-mc.top/"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/in-game_screen_editor/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "top.terry_mc.inGame_screen_editor.fabric.IngameScreenEditorFabric"
+    ]
+  },
+  "mixins": [
+    "in-game_screen_editor.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "minecraft": "~1.18.2",
+    "java": ">=17",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

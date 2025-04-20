@@ -1,0 +1,29 @@
+modLoader = "javafml"
+loaderVersion = "[40,)"
+#issueTrackerURL = ""
+license = "All Rights Reserved"
+
+[[mods]]
+modId = "in-game_screen_editor"
+version = "${version}"
+displayName = "In-game Screen Editor"
+authors = "Terry_MC"
+description = '''
+In-game Screen Editor
+'''
+#logoFile = ""
+
+[[dependencies.in-game_screen_editor]]
+modId = "forge"
+mandatory = true
+versionRange = "[40,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.in-game_screen_editor]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.18.2,)"
+ordering = "NONE"
+side = "BOTH"
+
