@@ -11,14 +11,17 @@ public final class IngameScreenEditor {
     public static final String MOD_ID = "in-game_screen_editor";
     public static final Logger LOGGER = LogManager.getLogger("In-game Screen Editor");
     public static final Preferences PREFERENCES = Preferences.userNodeForPackage(IngameScreenEditor.class);
-    public static Path STORAGE_PATH = Path.of(PREFERENCES.get("storage_path", "/gui")).toAbsolutePath();;
+    public static Path STORAGE_PATH = Path.of(PREFERENCES.get("storage_path", "./gui")).toAbsolutePath();
 
     public static void init() {
+        setStoragePath(STORAGE_PATH.toString());
+        LOGGER.info("Storage path: " + STORAGE_PATH);
         LOGGER.info("In-game Screen Editor loaded.");
     }
 
     public static boolean setStoragePath(String path) {
         try {
+            Path.of(path).toFile().mkdirs();
             STORAGE_PATH = Path.of(path).toAbsolutePath();
             PREFERENCES.put("storage_path", path);
         } catch (InvalidPathException e) {
